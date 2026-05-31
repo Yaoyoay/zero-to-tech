@@ -3,20 +3,169 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个网页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="计算机专业研二学生的个人主页，记录全栈学习、项目实践与求职作品集。">
+    <title>Yao | Full-stack Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <div class="card">
-        <h1>你好，Git</h1>
-        <p id="msg">这是我的第一个网页，现在它还只是一个本地的 HTML 文件。</p>
-        <button onclick="changeText()">点我试试</button>
-    </div>
+    <header class="site-header">
+        <nav class="nav" aria-label="主导航">
+            <a class="brand" href="#top" aria-label="回到首页">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Yao.dev</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+                <span class="sr-only">打开导航</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#about">关于我</a>
+                <a href="#skills">技术栈</a>
+                <a href="#projects">项目</a>
+                <a href="#learning">学习记录</a>
+                <a href="#contact">联系</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero section">
+            <div class="hero-copy">
+                <p class="eyebrow">Computer Science Graduate Student</p>
+                <h1>你好，我是 Yao，一名正在认真长大的全栈开发学习者。</h1>
+                <p class="hero-text">
+                    计算机专业研二学生，正在把课程学习、工程实践和求职作品集整理成一个长期更新的个人主页。喜欢清晰的代码、稳定的系统，也喜欢一点点可爱的猫猫能量。
+                </p>
+
+                <div class="hero-actions" aria-label="主要操作">
+                    <a class="button button-primary" href="#projects">查看项目</a>
+                    <a class="button button-secondary" href="#learning">学习记录</a>
+                </div>
+            </div>
+
+            <aside class="cat-card" aria-label="个人状态卡片">
+                <div class="cat-face" aria-hidden="true">
+                    <span class="ear ear-left"></span>
+                    <span class="ear ear-right"></span>
+                    <span class="eye eye-left"></span>
+                    <span class="eye eye-right"></span>
+                    <span class="nose"></span>
+                    <span class="whisker whisker-left"></span>
+                    <span class="whisker whisker-right"></span>
+                </div>
+                <div>
+                    <p class="cat-status">Now building</p>
+                    <h2>个人主页 v1.0</h2>
+                    <p>目标是把每一次学习、每一个项目和每一次迭代，都沉淀成可以被看见的作品。</p>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section split-section" id="about">
+            <div>
+                <p class="eyebrow">About Me</p>
+                <h2>把基础打牢，也把作品做出来。</h2>
+            </div>
+            <div class="about-panel">
+                <p>
+                    我是计算机专业研二学生，目前围绕前端基础、后端开发、数据库、工程化与部署持续学习。这个主页会作为我的公开学习档案，也会逐步沉淀求职作品集。
+                </p>
+                <p>
+                    近期目标是完成若干个完整的全栈项目，从需求分析、页面设计、接口开发、数据建模到上线部署都亲手走一遍。
+                </p>
+                <div class="quick-facts">
+                    <span>求职方向：开发工程师</span>
+                    <span>当前重点：全栈项目实践</span>
+                    <span>更新节奏：持续记录</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-heading">
+                <p class="eyebrow">Skills</p>
+                <h2>技术栈地图</h2>
+            </div>
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <h3>Frontend</h3>
+                    <div class="tag-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive UI</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <h3>Backend</h3>
+                    <div class="tag-list">
+                        <span>Node.js</span>
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>REST API</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <h3>Database</h3>
+                    <div class="tag-list">
+                        <span>MySQL</span>
+                        <span>Redis</span>
+                        <span>Data Modeling</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <h3>Tools</h3>
+                    <div class="tag-list">
+                        <span>Git</span>
+                        <span>Linux</span>
+                        <span>Docker</span>
+                        <span>VS Code</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">Projects</p>
+                <h2>项目作品集</h2>
+            </div>
+            <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="section split-section" id="learning">
+            <div>
+                <p class="eyebrow">Learning Log</p>
+                <h2>学习记录会在这里一点点长出来。</h2>
+            </div>
+            <div class="timeline" id="learningTimeline" aria-live="polite"></div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h2>欢迎连接，一起看看下一段代码会长成什么样。</h2>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="#" aria-label="简历链接待更新">Resume</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="paw" aria-hidden="true"></span>
+        <p>Designed and coded by Yao. Keep learning, keep shipping.</p>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
