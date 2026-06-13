@@ -254,11 +254,14 @@
     background:
         linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 4px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 2px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 6px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 12px 8px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
@@ -268,11 +271,14 @@
     background:
         linear-gradient(#ffffff, #ffffff) 0 0 / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 0 4px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 4px 4px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 2px 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 6px 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 0 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 12px 8px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 4px 12px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 8px 12px / 4px 4px no-repeat;
 }
@@ -421,11 +427,14 @@
     background:
         linear-gradient(var(--mint), var(--mint)) 0 0 / 4px 4px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 0 4px / 4px 4px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 4px 4px / 4px 4px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 2px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 6px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 0 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 12px 8px / 4px 4px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 4px 12px / 4px 4px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
@@ -608,11 +617,14 @@
     background:
         linear-gradient(var(--gold), var(--gold)) 0 0 / 4px 4px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 0 4px / 4px 4px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 4px 4px / 4px 4px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 2px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 6px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 0 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 12px 8px / 4px 4px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 4px 12px / 4px 4px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
@@ -667,11 +679,14 @@
     background:
         linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 4px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 2px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 6px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 12px 8px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
