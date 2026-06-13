@@ -607,39 +607,6 @@ h3 {
     line-height: 1.5;
 }
 
-/* ── Journal ── */
-
-.journal-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.journal-entry {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 24px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line);
-}
-
-.journal-entry:last-child {
-    border-bottom: none;
-}
-
-.journal-date {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--gold);
-    padding-top: 2px;
-}
-
-.journal-event {
-    margin: 0;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.5;
-}
-
 /* ── Contact ── */
 
 .contact-section {
@@ -785,10 +752,5 @@ h3 {
 
     .project-grid {
         grid-template-columns: 1fr;
-    }
-
-    .journal-entry {
-        grid-template-columns: 1fr;
-        gap: 4px;
     }
 }

@@ -64,18 +64,9 @@ const notes = [
     }
 ];
 
-const journal = [
-    { date: "2026.06", event: "Rebuilt portfolio with cleaner structure and new sections." },
-    { date: "2026.05", event: "Started learning TypeScript and React for full-stack projects." },
-    { date: "2026.05", event: "Explored LangChain and built a simple RAG pipeline." },
-    { date: "2026.04", event: "Read Toolformer paper — started thinking about tool use in LLMs." },
-    { date: "2026.04", event: "Set up this site and began tracking learning progress." }
-];
-
 const projectGrid = document.querySelector("#projectGrid");
 const skillGrid = document.querySelector("#skillGrid");
 const noteList = document.querySelector("#noteList");
-const journalList = document.querySelector("#journalList");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#navMenu");
 const navLinks = document.querySelectorAll(".nav-menu a");
@@ -118,15 +109,6 @@ function renderNotes() {
     `).join("");
 }
 
-function renderJournal() {
-    journalList.innerHTML = journal.map((j) => `
-        <div class="journal-entry">
-            <span class="journal-date">${j.date}</span>
-            <p class="journal-event">${j.event}</p>
-        </div>
-    `).join("");
-}
-
 function closeMobileNav() {
     navMenu.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
@@ -150,7 +132,6 @@ function setActiveLink() {
 renderProjects();
 renderSkills();
 renderNotes();
-renderJournal();
 setActiveLink();
 
 navToggle.addEventListener("click", () => {
