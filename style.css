@@ -380,7 +380,8 @@ h3 {
     height: 14px;
     margin-right: 8px;
     background:
-        linear-gradient(var(--pink), var(--pink)) 5px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 10px 0 / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 0 5px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 5px 5px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 10px 5px / 4px 4px no-repeat,
@@ -390,7 +391,8 @@ h3 {
 
 .button-primary::before {
     background:
-        linear-gradient(#ffffff, #ffffff) 5px 0 / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 0 0 / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 10px 0 / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 0 5px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 5px 5px / 4px 4px no-repeat,
         linear-gradient(#ffffff, #ffffff) 10px 5px / 4px 4px no-repeat,
@@ -539,7 +541,8 @@ h3 {
     height: 24px;
     opacity: 0.34;
     background:
-        linear-gradient(var(--mint), var(--mint)) 8px 0 / 8px 8px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 0 0 / 8px 8px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 16px 0 / 8px 8px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 0 8px / 8px 8px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 8px 8px / 8px 8px no-repeat,
         linear-gradient(var(--mint), var(--mint)) 16px 8px / 8px 8px no-repeat,
@@ -716,7 +719,8 @@ h3 {
     width: 48px;
     height: 48px;
     background:
-        linear-gradient(var(--gold), var(--gold)) 16px 0 / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 0 0 / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 32px 0 / 16px 16px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 0 16px / 16px 16px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 16px 16px / 16px 16px no-repeat,
         linear-gradient(var(--gold), var(--gold)) 32px 16px / 16px 16px no-repeat,
@@ -771,7 +775,8 @@ h3 {
     width: 14px;
     height: 14px;
     background:
-        linear-gradient(var(--pink), var(--pink)) 5px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 10px 0 / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 0 5px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 5px 5px / 4px 4px no-repeat,
         linear-gradient(var(--pink), var(--pink)) 10px 5px / 4px 4px no-repeat,
