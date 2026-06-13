@@ -1,0 +1,15 @@
+:root {
+    --bg: #fffaf4;
+    --surface: #ffffff;
+    --surface-soft: #fff1e5;
+    --ink: #27211f;
+    --muted: #756b65;
+    --line: #eaded2;
+    --pink: #f28ca6;
+    --mint: #76bfa7;
+    --gold: #e5a84b;
+    --shadow: 0 24px 60px rgba(83, 58, 38, 0.12);
+    --pixel-shadow: 8px 8px 0 rgba(39, 33, 31, 0.08);
+    --radius: 8px;
+    --max-width: 1120px;
+}
