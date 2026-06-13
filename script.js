@@ -41,20 +41,26 @@ const skillGroups = [
     }
 ];
 
-const papers = [
+const notes = [
     {
-        title: "Paper title #1",
-        insight: "What problem does this paper solve and what's the core idea? One sentence.",
-        learned: "Relevant to my projects because... I want to try X in my next build."
+        type: "Paper",
+        title: "Toolformer: LLMs Can Learn to Use Tools",
+        summary: "Showed that models can learn tool use via few-shot examples — search engine, calculator, calendar. Made me rethink how agents should be built."
     },
     {
-        title: "Paper title #2",
-        insight: "Key method or finding in one line.",
-        learned: "This changed how I think about Y."
+        type: "Video",
+        title: "Andrej Karpathy — Intro to Large Language Models",
+        summary: "Best high-level walkthrough of the LLM stack: tokenization → pretraining → finetuning → inference. Clarified a lot of vague concepts."
     },
     {
-        title: "Paper title #3",
-        insight: "Another paper I read and took notes on."
+        type: "Paper",
+        title: "ReAct: Synergizing Reasoning and Acting in LLMs",
+        summary: "Interleaving reasoning traces with action steps improves both. The foundation of modern agent frameworks."
+    },
+    {
+        type: "Post",
+        title: "Vercel AI SDK — Streaming Text Generation",
+        summary: "Understood how streaming works under the hood — chunked responses, SSE, and how to handle them in the frontend."
     }
 ];
 
@@ -68,7 +74,7 @@ const journal = [
 
 const projectGrid = document.querySelector("#projectGrid");
 const skillGrid = document.querySelector("#skillGrid");
-const paperGrid = document.querySelector("#paperGrid");
+const noteList = document.querySelector("#noteList");
 const journalList = document.querySelector("#journalList");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#navMenu");
@@ -100,13 +106,15 @@ function renderSkills() {
     `).join("");
 }
 
-function renderPapers() {
-    paperGrid.innerHTML = papers.map((p) => `
-        <article class="paper-entry">
-            <h3>${p.title}</h3>
-            <p class="paper-insight">${p.insight}</p>
-            ${p.learned ? `<p class="paper-learned"><strong>Learned:</strong> ${p.learned}</p>` : ""}
-        </article>
+function renderNotes() {
+    noteList.innerHTML = notes.map((n) => `
+        <div class="note-entry">
+            <div class="note-head">
+                <span class="note-type">${n.type}</span>
+                <strong class="note-title">${n.title}</strong>
+            </div>
+            <p class="note-summary">${n.summary}</p>
+        </div>
     `).join("");
 }
 
@@ -141,7 +149,7 @@ function setActiveLink() {
 
 renderProjects();
 renderSkills();
-renderPapers();
+renderNotes();
 renderJournal();
 setActiveLink();
 
