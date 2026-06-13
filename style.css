@@ -468,6 +468,13 @@ h3 {
     border-radius: var(--radius);
     background: rgba(255, 255, 255, 0.78);
     box-shadow: var(--shadow);
+    transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 60px rgba(83, 58, 38, 0.18);
+    border-color: var(--mint);
 }
 
 .project-card::before {
