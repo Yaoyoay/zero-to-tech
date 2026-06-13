@@ -149,15 +149,17 @@ a {
 .nav-tabs {
     display: flex;
     margin-left: 10px;
-    padding-left: 10px;
-    border-left: 1px solid var(--line);
-    gap: 4px;
+    padding: 2px;
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-soft);
 }
 
 .nav-tab {
     border: none;
     border-radius: 999px;
-    padding: 8px 14px;
+    padding: 6px 14px;
     background: transparent;
     color: var(--muted);
     font-size: 14px;
@@ -169,12 +171,12 @@ a {
 
 .nav-tab:hover {
     color: var(--ink);
-    background: var(--surface-soft);
 }
 
 .nav-tab.active {
     color: #fff;
     background: var(--ink);
+    box-shadow: 0 1px 3px rgba(39, 33, 31, 0.15);
 }
 
 .nav-back {
@@ -376,27 +378,33 @@ h3 {
 
 .button::before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin-right: 8px;
     background:
         linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 5px 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 5px 10px / 4px 4px no-repeat;
+        linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 2px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 6px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
 }
 
 .button-primary::before {
     background:
         linear-gradient(#ffffff, #ffffff) 0 0 / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 10px 0 / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 0 5px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 5px 5px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 10px 5px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 5px 10px / 4px 4px no-repeat;
+        linear-gradient(#ffffff, #ffffff) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 2px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 6px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 8px 12px / 4px 4px no-repeat;
 }
 
 .button-primary {
@@ -537,16 +545,19 @@ h3 {
     position: absolute;
     top: 16px;
     right: 16px;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     opacity: 0.34;
     background:
-        linear-gradient(var(--mint), var(--mint)) 0 0 / 8px 8px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 16px 0 / 8px 8px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 0 8px / 8px 8px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 8px 8px / 8px 8px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 16px 8px / 8px 8px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 8px 16px / 8px 8px no-repeat;
+        linear-gradient(var(--mint), var(--mint)) 0 0 / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 2px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 6px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(var(--mint), var(--mint)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
 }
 
@@ -716,15 +727,18 @@ h3 {
 }
 
 .life-card-icon {
-    width: 48px;
-    height: 48px;
+    width: 16px;
+    height: 16px;
     background:
-        linear-gradient(var(--gold), var(--gold)) 0 0 / 16px 16px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 32px 0 / 16px 16px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 0 16px / 16px 16px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 16px 16px / 16px 16px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 32px 16px / 16px 16px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 16px 32px / 16px 16px no-repeat;
+        linear-gradient(var(--gold), var(--gold)) 0 0 / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 2px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 6px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
     opacity: 0.34;
 }
@@ -772,15 +786,18 @@ h3 {
 
 .contact-links a::before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     background:
         linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 5px 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 10px 5px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 5px 10px / 4px 4px no-repeat;
+        linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 2px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 6px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 10px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
     image-rendering: pixelated;
 }
 
@@ -868,12 +885,6 @@ h3 {
         padding: 12px 14px;
     }
 
-    .nav-tab {
-        flex: 1;
-        padding: 12px;
-        text-align: center;
-    }
-
     .section {
         width: min(calc(100% - 28px), var(--max-width));
         padding: 64px 0;
@@ -893,10 +904,17 @@ h3 {
 
     .nav-tabs {
         margin-left: 0;
-        padding-left: 0;
+        padding: 2px;
         border-left: none;
-        padding-top: 12px;
-        margin-top: 4px;
         border-top: 1px solid var(--line);
+        border-radius: 999px;
+        margin-top: 12px;
+        padding-top: 2px;
+    }
+
+    .nav-tab {
+        flex: 1;
+        padding: 10px 14px;
+        text-align: center;
     }
 }
