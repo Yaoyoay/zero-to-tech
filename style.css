@@ -726,6 +726,12 @@ h3 {
     margin: 0;
 }
 
+.life-card h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--ink);
+}
+
 .life-card-icon {
     width: 16px;
     height: 16px;
