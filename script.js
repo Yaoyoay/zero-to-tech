@@ -98,7 +98,7 @@ function renderSkills() {
 }
 
 function renderNotes() {
-    noteList.innerHTML = notes.map((n) => `
+    noteList.innerHTML = notes.slice(0, 3).map((n) => `
         <div class="note-entry">
             <div class="note-head">
                 <span class="note-type">${n.type}</span>

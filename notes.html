@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Notes · Yao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="notes-page">
+    <header class="site-header">
+        <nav class="nav" aria-label="Navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Yao</span>
+            </a>
+            <a class="nav-back" href="index.html">&larr; Back</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section narrow-section">
+            <div class="section-header">
+                <p class="eyebrow">Notes</p>
+                <h2>All learning notes</h2>
+                <p class="section-desc">Papers, videos, talks — everything I've taken notes on.</p>
+            </div>
+            <div class="notes-list" id="allNoteList"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Yao · Keep building</p>
+    </footer>
+
+    <script>
+        const notes = [
+            { type: "Paper", title: "Toolformer: LLMs Can Learn to Use Tools", summary: "Showed that models can learn tool use via few-shot examples — search engine, calculator, calendar. Made me rethink how agents should be built." },
+            { type: "Video", title: "Andrej Karpathy — Intro to Large Language Models", summary: "Best high-level walkthrough of the LLM stack: tokenization \u2192 pretraining \u2192 finetuning \u2192 inference. Clarified a lot of vague concepts." },
+            { type: "Paper", title: "ReAct: Synergizing Reasoning and Acting in LLMs", summary: "Interleaving reasoning traces with action steps improves both. The foundation of modern agent frameworks." },
+            { type: "Post", title: "Vercel AI SDK — Streaming Text Generation", summary: "Understood how streaming works under the hood — chunked responses, SSE, and how to handle them in the frontend." }
+        ];
+
+        document.querySelector("#allNoteList").innerHTML = notes.map((n) => `
+            <div class="note-entry">
+                <div class="note-head">
+                    <span class="note-type">${n.type}</span>
+                    <strong class="note-title">${n.title}</strong>
+                </div>
+                <p class="note-summary">${n.summary}</p>
+            </div>
+        `).join("");
+    </script>
+</body>
+</html>

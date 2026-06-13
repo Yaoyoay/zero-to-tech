@@ -146,6 +146,20 @@ a {
     cursor: pointer;
 }
 
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--muted);
+    transition: color 180ms ease;
+}
+
+.nav-back:hover {
+    color: var(--ink);
+}
+
 .nav-toggle span:not(.sr-only) {
     display: block;
     width: 18px;
@@ -612,6 +626,24 @@ h3 {
     font-size: 14px;
     color: var(--muted);
     line-height: 1.5;
+}
+
+.notes-all {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--pink);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+    transition: opacity 180ms ease;
+}
+
+.notes-all:hover {
+    opacity: 0.7;
 }
 
 /* ── Contact ── */
