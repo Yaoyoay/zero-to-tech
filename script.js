@@ -150,3 +150,24 @@ window.addEventListener("resize", () => {
         closeMobileNav();
     }
 });
+
+/* ── Tab Switching ── */
+
+const tabButtons = document.querySelectorAll(".nav-tab");
+const tabPanels = {
+    learning: document.querySelector("#tab-learning"),
+    life: document.querySelector("#tab-life")
+};
+
+tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab;
+
+        tabButtons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        Object.entries(tabPanels).forEach(([key, panel]) => {
+            panel.classList.toggle("active", key === tab);
+        });
+    });
+});

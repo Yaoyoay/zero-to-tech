@@ -146,6 +146,37 @@ a {
     cursor: pointer;
 }
 
+.nav-tabs {
+    display: flex;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid var(--line);
+    gap: 4px;
+}
+
+.nav-tab {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-tab:hover {
+    color: var(--ink);
+    background: var(--surface-soft);
+}
+
+.nav-tab.active {
+    color: #fff;
+    background: var(--ink);
+}
+
 .nav-back {
     display: inline-flex;
     align-items: center;
@@ -199,6 +230,14 @@ h3 {
 }
 
 /* ── Section Layout ── */
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
 
 .section {
     width: min(calc(100% - 40px), var(--max-width));
@@ -646,6 +685,46 @@ h3 {
     opacity: 0.7;
 }
 
+/* ── Life ── */
+
+.life-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.life-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 40px 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow);
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.life-card p {
+    margin: 0;
+}
+
+.life-card-icon {
+    width: 48px;
+    height: 48px;
+    background:
+        linear-gradient(var(--gold), var(--gold)) 16px 0 / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 0 16px / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 16px 16px / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 32px 16px / 16px 16px no-repeat,
+        linear-gradient(var(--gold), var(--gold)) 16px 32px / 16px 16px no-repeat;
+    image-rendering: pixelated;
+    opacity: 0.34;
+}
+
 /* ── Contact ── */
 
 .contact-section {
@@ -743,6 +822,10 @@ h3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .life-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .contact-section {
         flex-direction: column;
         align-items: flex-start;
@@ -780,6 +863,12 @@ h3 {
         padding: 12px 14px;
     }
 
+    .nav-tab {
+        flex: 1;
+        padding: 12px;
+        text-align: center;
+    }
+
     .section {
         width: min(calc(100% - 28px), var(--max-width));
         padding: 64px 0;
@@ -791,5 +880,18 @@ h3 {
 
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .life-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-tabs {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        padding-top: 12px;
+        margin-top: 4px;
+        border-top: 1px solid var(--line);
     }
 }

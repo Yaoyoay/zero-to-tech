@@ -21,6 +21,10 @@
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#notes">Notes</a>
+                <div class="nav-tabs" role="tablist">
+                    <button class="nav-tab active" role="tab" data-tab="learning">Learn</button>
+                    <button class="nav-tab" role="tab" data-tab="life">Life</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -74,44 +78,72 @@
             </aside>
         </section>
 
-        <!-- Projects -->
-        <section class="section" id="projects">
-            <div class="section-header">
-                <p class="eyebrow">Projects</p>
-                <h2>Things I've built</h2>
-                <p class="section-desc">Small, focused projects. Each one taught me something.</p>
-            </div>
-            <div class="project-grid" id="projectGrid"></div>
-        </section>
-
-        <!-- Skills + About -->
-        <section class="section split-section" id="skills">
-            <div class="about-mini">
-                <p class="eyebrow">About</p>
-                <h2>Building with LLMs, learning full-stack.</h2>
-                <p>CS grad focused on LLM applications and Agent development. Full-stack is a means, not the destination.</p>
-                <div class="about-facts">
-                    <span>Seeking LLM / Agent roles</span>
-                    <span>Currently: vibe coding + papers</span>
+        <!-- Learning Tab -->
+        <div class="tab-panel active" id="tab-learning">
+            <!-- Projects -->
+            <section class="section" id="projects">
+                <div class="section-header">
+                    <p class="eyebrow">Projects</p>
+                    <h2>Things I've built</h2>
+                    <p class="section-desc">Small, focused projects. Each one taught me something.</p>
                 </div>
-            </div>
-            <div>
-                <p class="eyebrow">Skills</p>
-                <h2>Tech stack</h2>
-                <div class="skill-categories" id="skillGrid"></div>
-            </div>
-        </section>
+                <div class="project-grid" id="projectGrid"></div>
+            </section>
 
-        <!-- Notes -->
-        <section class="section narrow-section" id="notes">
-            <div class="section-header">
-                <p class="eyebrow">Notes</p>
-                <h2>Learning notes</h2>
-                <p class="section-desc">Papers, videos, talks — short notes on things I'm learning.</p>
-            </div>
-            <div class="notes-list" id="noteList"></div>
-            <a class="notes-all" href="notes.html">View all notes &rarr;</a>
-        </section>
+            <!-- Skills + About -->
+            <section class="section split-section" id="skills">
+                <div class="about-mini">
+                    <p class="eyebrow">About</p>
+                    <h2>Building with LLMs, learning full-stack.</h2>
+                    <p>CS grad focused on LLM applications and Agent development. Full-stack is a means, not the destination.</p>
+                    <div class="about-facts">
+                        <span>Seeking LLM / Agent roles</span>
+                        <span>Currently: vibe coding + papers</span>
+                    </div>
+                </div>
+                <div>
+                    <p class="eyebrow">Skills</p>
+                    <h2>Tech stack</h2>
+                    <div class="skill-categories" id="skillGrid"></div>
+                </div>
+            </section>
+
+            <!-- Notes -->
+            <section class="section narrow-section" id="notes">
+                <div class="section-header">
+                    <p class="eyebrow">Notes</p>
+                    <h2>Learning notes</h2>
+                    <p class="section-desc">Papers, videos, talks — short notes on things I'm learning.</p>
+                </div>
+                <div class="notes-list" id="noteList"></div>
+                <a class="notes-all" href="notes.html">View all notes &rarr;</a>
+            </section>
+        </div>
+
+        <!-- Life Tab -->
+        <div class="tab-panel" id="tab-life">
+            <section class="section" id="life-places">
+                <div class="section-header">
+                    <p class="eyebrow">Places</p>
+                    <h2>Eats & travels</h2>
+                    <p class="section-desc">Good food, nice places, and little moments worth remembering.</p>
+                </div>
+                <div class="life-grid">
+                    <div class="life-card">
+                        <div class="life-card-icon" aria-hidden="true"></div>
+                        <p>Coming soon — the first entry goes here.</p>
+                    </div>
+                    <div class="life-card">
+                        <div class="life-card-icon" aria-hidden="true"></div>
+                        <p>Another memory waiting to be added.</p>
+                    </div>
+                    <div class="life-card">
+                        <div class="life-card-icon" aria-hidden="true"></div>
+                        <p>And another one.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- Contact -->
         <section class="section contact-section" id="contact">
