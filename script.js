@@ -1,72 +1,121 @@
 const projects = [
     {
-        title: "个人主页 Portfolio",
-        description: "用于展示个人背景、技术栈、项目链接和学习记录的长期维护主页，也是前端基础能力的第一个作品。",
-        tags: ["HTML", "CSS", "JavaScript"],
-        link: "#top",
-        linkText: "查看当前页面"
+        title: "Vibe-coded project #1",
+        desc: "A short one-liner about what this project does and why you built it.",
+        tags: ["Python", "LLM"],
+        link: "https://github.com/",
+        linkText: "GitHub \u2192",
+        note: "The key challenge was X. I solved it by Y. This taught me Z about building with LLMs."
     },
     {
-        title: "全栈练习项目",
-        description: "预留给后续完整项目：从页面、接口、数据库到部署，记录一次完整的工程实践过程。",
-        tags: ["Frontend", "Backend", "Database"],
-        link: "#contact",
-        linkText: "Coming soon"
+        title: "Vibe-coded project #2",
+        desc: "What does this Agent / RAG / tool demo do? Keep it to one sentence.",
+        tags: ["TypeScript", "Agent"],
+        link: "https://github.com/",
+        linkText: "GitHub \u2192",
+        note: "I ran into an unexpected issue with tool calling. Here's how I debugged it."
     },
     {
-        title: "学习记录系统",
-        description: "计划整理学习笔记、阶段复盘和项目日志，后续可以升级为 Markdown 驱动的个人知识库。",
-        tags: ["Learning", "Blog", "GitHub Pages"],
-        link: "#learning",
-        linkText: "查看记录"
+        title: "Vibe-coded project #3",
+        desc: "Another focused project — small scope, real learning.",
+        tags: ["Python", "RAG"],
+        note: "Still planning this one. Space holder for the next thing I build."
     }
 ];
 
-const learningLogs = [
+const skillGroups = [
     {
-        date: "2026.05",
-        title: "Git 与静态页面基础",
-        content: "完成本地 HTML、CSS、JavaScript 项目的创建与版本管理，开始把学习过程沉淀到仓库中。"
+        label: "Major",
+        type: "major",
+        items: ["LLM Application", "Agent Development", "Prompt Engineering", "RAG", "Function Calling"]
     },
     {
-        date: "Next",
-        title: "前端页面与响应式布局",
-        content: "继续练习语义化 HTML、CSS Grid、Flexbox、移动端适配和基础交互。"
+        label: "Minor",
+        type: "minor",
+        items: ["Python", "TypeScript", "React", "Node.js"]
     },
     {
-        date: "Soon",
-        title: "全栈项目实践",
-        content: "规划一个带接口、数据库和部署流程的完整项目，逐步补充到作品集。"
+        label: "Exploring",
+        type: "exploring",
+        items: ["LangChain", "CrewAI", "Vercel AI SDK"]
     }
+];
+
+const papers = [
+    {
+        title: "Paper title #1",
+        insight: "What problem does this paper solve and what's the core idea? One sentence.",
+        learned: "Relevant to my projects because... I want to try X in my next build."
+    },
+    {
+        title: "Paper title #2",
+        insight: "Key method or finding in one line.",
+        learned: "This changed how I think about Y."
+    },
+    {
+        title: "Paper title #3",
+        insight: "Another paper I read and took notes on."
+    }
+];
+
+const journal = [
+    { date: "2026.06", event: "Rebuilt portfolio with cleaner structure and new sections." },
+    { date: "2026.05", event: "Started learning TypeScript and React for full-stack projects." },
+    { date: "2026.05", event: "Explored LangChain and built a simple RAG pipeline." },
+    { date: "2026.04", event: "Read Toolformer paper — started thinking about tool use in LLMs." },
+    { date: "2026.04", event: "Set up this site and began tracking learning progress." }
 ];
 
 const projectGrid = document.querySelector("#projectGrid");
-const learningTimeline = document.querySelector("#learningTimeline");
+const skillGrid = document.querySelector("#skillGrid");
+const paperGrid = document.querySelector("#paperGrid");
+const journalList = document.querySelector("#journalList");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector("#navMenu");
 const navLinks = document.querySelectorAll(".nav-menu a");
 const sections = document.querySelectorAll("main section[id]");
 
 function renderProjects() {
-    projectGrid.innerHTML = projects.map((project) => `
+    projectGrid.innerHTML = projects.map((p) => `
         <article class="project-card">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
             <div class="project-tags">
-                ${project.tags.map((tag) => `<span>${tag}</span>`).join("")}
+                ${p.tags.map((t) => `<span>${t}</span>`).join("")}
             </div>
-            <a href="${project.link}">${project.linkText}</a>
+            ${p.note ? `<div class="project-note"><p class="note-label">What I learned</p><p>${p.note}</p></div>` : ""}
+            ${p.link ? `<a href="${p.link}">${p.linkText || "View \u2192"}</a>` : ""}
         </article>
     `).join("");
 }
 
-function renderLearningLogs() {
-    learningTimeline.innerHTML = learningLogs.map((item) => `
-        <article class="timeline-item">
-            <time>${item.date}</time>
-            <h3>${item.title}</h3>
-            <p>${item.content}</p>
+function renderSkills() {
+    skillGrid.innerHTML = skillGroups.map((g) => `
+        <div class="skill-group">
+            <h3>${g.label}</h3>
+            <div class="skill-items">
+                ${g.items.map((s) => `<span class="skill-item"><span class="skill-dot ${g.type}"></span>${s}</span>`).join("")}
+            </div>
+        </div>
+    `).join("");
+}
+
+function renderPapers() {
+    paperGrid.innerHTML = papers.map((p) => `
+        <article class="paper-entry">
+            <h3>${p.title}</h3>
+            <p class="paper-insight">${p.insight}</p>
+            ${p.learned ? `<p class="paper-learned"><strong>Learned:</strong> ${p.learned}</p>` : ""}
         </article>
+    `).join("");
+}
+
+function renderJournal() {
+    journalList.innerHTML = journal.map((j) => `
+        <div class="journal-entry">
+            <span class="journal-date">${j.date}</span>
+            <p class="journal-event">${j.event}</p>
+        </div>
     `).join("");
 }
 
@@ -91,7 +140,9 @@ function setActiveLink() {
 }
 
 renderProjects();
-renderLearningLogs();
+renderSkills();
+renderPapers();
+renderJournal();
 setActiveLink();
 
 navToggle.addEventListener("click", () => {
