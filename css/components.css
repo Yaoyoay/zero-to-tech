@@ -248,39 +248,12 @@
 
 .button::before {
     content: "";
-    width: 16px;
-    height: 16px;
     margin-right: 8px;
-    background:
-        linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
-    image-rendering: pixelated;
+    --pixel-color: var(--pink);
 }
 
 .button-primary::before {
-    background:
-        linear-gradient(#ffffff, #ffffff) 0 0 / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 12px 0 / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 0 4px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 4px 4px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 12px 4px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 0 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 4px 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 8px 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 12px 8px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 4px 12px / 4px 4px no-repeat,
-        linear-gradient(#ffffff, #ffffff) 8px 12px / 4px 4px no-repeat;
+    --pixel-color: #ffffff;
 }
 
 .button-primary {
@@ -334,15 +307,8 @@
     position: absolute;
     left: 0;
     top: 50%;
-    width: 4px;
-    height: 4px;
-    background: var(--mint);
-    box-shadow:
-        4px 0 0 var(--mint),
-        0 4px 0 var(--mint),
-        4px 4px 0 var(--mint);
     transform: translateY(-50%);
-    image-rendering: pixelated;
+    --dot-color: var(--mint);
 }
 
 /* ── Skills ── */
@@ -421,23 +387,8 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    width: 16px;
-    height: 16px;
     opacity: 0.34;
-    background:
-        linear-gradient(var(--mint), var(--mint)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 12px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 0 4px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 4px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 12px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 0 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 4px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 8px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 12px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 4px 12px / 4px 4px no-repeat,
-        linear-gradient(var(--mint), var(--mint)) 8px 12px / 4px 4px no-repeat;
-    image-rendering: pixelated;
+    --pixel-color: var(--mint);
 }
 
 .project-card:nth-child(2n) {
@@ -471,15 +422,8 @@
     position: absolute;
     left: 8px;
     top: 50%;
-    width: 4px;
-    height: 4px;
-    background: var(--pink);
-    box-shadow:
-        4px 0 0 var(--pink),
-        0 4px 0 var(--pink),
-        4px 4px 0 var(--pink);
     transform: translateY(-50%);
-    image-rendering: pixelated;
+    --dot-color: var(--pink);
 }
 
 .project-note {
@@ -612,23 +556,8 @@
 }
 
 .life-card-icon {
-    width: 16px;
-    height: 16px;
-    background:
-        linear-gradient(var(--gold), var(--gold)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 12px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 0 4px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 4px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 12px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 0 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 4px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 8px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 12px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 4px 12px / 4px 4px no-repeat,
-        linear-gradient(var(--gold), var(--gold)) 8px 12px / 4px 4px no-repeat;
-    image-rendering: pixelated;
     opacity: 0.34;
+    --pixel-color: var(--gold);
 }
 
 /* ── Contact ── */
@@ -674,22 +603,7 @@
 
 .contact-links a::before {
     content: "";
-    width: 16px;
-    height: 16px;
-    background:
-        linear-gradient(var(--pink), var(--pink)) 0 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 0 / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 4px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 0 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 12px 8px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 4px 12px / 4px 4px no-repeat,
-        linear-gradient(var(--pink), var(--pink)) 8px 12px / 4px 4px no-repeat;
-    image-rendering: pixelated;
+    --pixel-color: var(--pink);
 }
 
 /* ── Footer ── */

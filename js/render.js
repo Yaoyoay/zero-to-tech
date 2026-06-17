@@ -1,4 +1,5 @@
 import { projects, skillGroups, notes } from "./data.js";
+import { renderNoteEntry } from "./utils.js";
 
 export function renderProjects(container) {
     container.innerHTML = projects.map((p) => `
@@ -26,13 +27,5 @@ export function renderSkills(container) {
 }
 
 export function renderNotes(container) {
-    container.innerHTML = notes.slice(0, 3).map((n) => `
-        <div class="note-entry">
-            <div class="note-head">
-                <span class="note-type">${n.type}</span>
-                <strong class="note-title">${n.title}</strong>
-            </div>
-            <p class="note-summary">${n.summary}</p>
-        </div>
-    `).join("");
+    container.innerHTML = notes.slice(0, 3).map(renderNoteEntry).join("");
 }
