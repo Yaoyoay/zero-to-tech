@@ -1,6 +1,10 @@
 import { projects, skillGroups, notes } from "./data.js";
 
 export function renderProjects(container) {
+    if (!container) {
+        console.error("[render] renderProjects: container element not found");
+        return;
+    }
     container.innerHTML = projects.map((p) => `
         <article class="project-card">
             <h3>${p.title}</h3>
@@ -15,6 +19,10 @@ export function renderProjects(container) {
 }
 
 export function renderSkills(container) {
+    if (!container) {
+        console.error("[render] renderSkills: container element not found");
+        return;
+    }
     container.innerHTML = skillGroups.map((g) => `
         <div class="skill-group">
             <h3>${g.label}</h3>
@@ -26,6 +34,10 @@ export function renderSkills(container) {
 }
 
 export function renderNotes(container) {
+    if (!container) {
+        console.error("[render] renderNotes: container element not found");
+        return;
+    }
     container.innerHTML = notes.slice(0, 3).map((n) => `
         <div class="note-entry">
             <div class="note-head">

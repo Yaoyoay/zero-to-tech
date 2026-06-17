@@ -9,6 +9,11 @@ export function initNav() {
         life: document.querySelector("#tab-life")
     };
 
+    if (!navToggle || !navMenu) {
+        console.error("[nav] Critical nav elements missing: navToggle or navMenu not found");
+        return;
+    }
+
     function closeMobileNav() {
         navMenu.classList.remove("open");
         navToggle.setAttribute("aria-expanded", "false");
@@ -29,9 +34,19 @@ export function initNav() {
 
     function switchTab(tab) {
         tabButtons.forEach((b) => b.classList.remove("active"));
-        document.querySelector(`.nav-tab[data-tab="${tab}"]`).classList.add("active");
+
+        const activeBtn = document.querySelector(`.nav-tab[data-tab="${tab}"]`);
+        if (!activeBtn) {
+            console.error(`[nav] switchTab: tab button not found for "${tab}"`);
+            return;
+        }
+        activeBtn.classList.add("active");
 
         Object.entries(tabPanels).forEach(([key, panel]) => {
+            if (!panel) {
+                console.error(`[nav] switchTab: panel element missing for "${key}"`);
+                return;
+            }
             panel.classList.toggle("active", key === tab);
         });
 
@@ -71,7 +86,12 @@ export function initNav() {
                 switchTab("learning");
                 const href = link.getAttribute("href");
                 if (href) {
-                    document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        console.error(`[nav] scroll target not found: "${href}"`);
+                    }
                 }
             }
         });
