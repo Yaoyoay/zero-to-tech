@@ -29,7 +29,8 @@ export function initNav() {
 
     function switchTab(tab) {
         tabButtons.forEach((b) => b.classList.remove("active"));
-        document.querySelector(`.nav-tab[data-tab="${tab}"]`).classList.add("active");
+        const target = [...tabButtons].find((b) => b.dataset.tab === tab);
+        if (target) target.classList.add("active");
 
         Object.entries(tabPanels).forEach(([key, panel]) => {
             panel.classList.toggle("active", key === tab);
