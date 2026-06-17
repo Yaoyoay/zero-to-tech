@@ -111,3 +111,44 @@ h3 {
     letter-spacing: 0;
     text-transform: uppercase;
 }
+
+/* ── Shared Pixel Utilities ── */
+
+/* 4×4 pixel icon grid (set --pixel-color to customize) */
+.pixel-icon,
+.button::before,
+.button-primary::before,
+.project-card::before,
+.life-card-icon,
+.contact-links a::before {
+    width: 16px;
+    height: 16px;
+    background:
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 0 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 12px 0 / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 0 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 4px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 8px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 12px 4px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 0 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 4px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 8px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 12px 8px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 4px 12px / 4px 4px no-repeat,
+        linear-gradient(var(--pixel-color), var(--pixel-color)) 8px 12px / 4px 4px no-repeat;
+    image-rendering: pixelated;
+}
+
+/* 2×2 pixel dot bullet (set --dot-color to customize) */
+.pixel-dot,
+.about-facts span::before,
+.project-tags span::before {
+    width: 4px;
+    height: 4px;
+    background: var(--dot-color);
+    box-shadow:
+        4px 0 0 var(--dot-color),
+        0 4px 0 var(--dot-color),
+        4px 4px 0 var(--dot-color);
+    image-rendering: pixelated;
+}
